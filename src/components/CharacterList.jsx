@@ -6,7 +6,7 @@ function CharacterList({data}) {
 
   if(data.length === 0){
     return (
-      <p>No se ha encontrado ningún personaje con ese nombre</p>
+      <p className="error_message">No se ha encontrado ningún personaje con ese nombre</p>
     );
   } else{
     characterHtml=data.map((character) => {
@@ -17,7 +17,7 @@ function CharacterList({data}) {
 
   return (
     <>
-    <p>Pincha sobre tu personaje para conocer más datos</p>
+    <p className="list_message">Pincha sobre tu personaje para conocer más datos</p>
     <div className="character_list">
       {characterHtml}</div>
       </>

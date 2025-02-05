@@ -47,16 +47,23 @@ function App() {
     <Routes>
       <Route path="/" element = {
         <>
-        <Filters 
-        setFilterName ={setFilterName} 
-        setSeacrh={setSeacrh} 
-        filterName={filterName}
-        search={search}
-        />
+        <div className="main_filters">
 
-        <button onClick={handleReset}>Nueva búsqueda</button>
-        <CharacterList data={filtersCharacters}/>
+          <Filters 
+          setFilterName ={setFilterName} 
+          setSeacrh={setSeacrh} 
+          filterName={filterName}
+          search={search}
+          />
+
+          <button className="reset_btn" onClick={handleReset}>Nueva búsqueda</button>
+
+        
+
+        <CharacterList data={filtersCharacters} />
+        </div>
         </>
+
         }/>
 
        <Route path="/character/:characterid" element={<CharacterDetail data ={characterDetail}/>}/>

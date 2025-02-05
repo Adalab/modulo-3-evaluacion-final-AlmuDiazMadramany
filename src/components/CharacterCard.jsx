@@ -1,9 +1,27 @@
 import { Link } from "react-router-dom"
 
+import gryffindorImg from "../images/house_gryffindor.webp";
+import hufflepuffImg from "../images/house_hufflepuff.webp";
+import ravenclawImg from "../images/house_ravenclaw.webp";
+import slytherinImg from "../images/house_slytherin.webp";
+
+
+
 function CharacterCard({info}) {
+
+  const getHouseImage = (house) =>{
+    switch (house){
+      case "Gryffindor" : return gryffindorImg;
+      case "Slytherin" : return slytherinImg;
+      case "Hufflepuff" : return hufflepuffImg;
+      case "Ravenclaw" : return ravenclawImg;
+      default : return `https://placehold.co/600x400?text=Harry+Potter+Character`
+    }
+  };
+
   const characterImage =info.image
   ? info.image
-  : `https://placehold.co/600x400?text=Harry+Potter+Character`;
+  : getHouseImage (info.house) ;
 
  
 

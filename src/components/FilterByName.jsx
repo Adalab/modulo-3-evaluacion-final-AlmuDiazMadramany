@@ -6,9 +6,9 @@ function FilterByName({setFilterName,filterName}) {
   }
 
   return (
-    <div>
-      <label htmlFor="">Busca por personaje</label>
-      <input type="text" onChange={handleInput} value={filterName}/>
+    <div className="filter_name">
+      <label className="filter_name_label" htmlFor="">Busca por personaje:</label>
+      <input className="filter_name_input" type="text" onChange={handleInput} value={filterName}/>
     </div>
   )
 }

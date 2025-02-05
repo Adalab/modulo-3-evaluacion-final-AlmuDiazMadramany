@@ -7,8 +7,8 @@ function FilterByHouse({setSeacrh, search}) {
   
   return (
     
-    <div>
-      <label htmlFor="">Busca por casa</label>
+    <div className="filter_house">
+      <label className="filter_house_label" htmlFor="">Busca por casa:</label>
       <select onChange={handleSelect} value={search}>
         <option value="Gryffindor">Gryffindor</option>
         <option value="Slytherin">Slytherin</option>
