@@ -11,10 +11,11 @@ function App() {
 
   const [characters, setCharacters] = useState([])
   const [filterName, setFilterName] = useState("")
-  
+  const [search, setSeacrh] = useState ("Slytherin")
+
   useEffect(()=>{
-    api().then((data)=>{setCharacters(data)})
-  }, [])
+    api(search).then((data)=>setCharacters(data))
+  }, [search])
 
   const filtersCharacters = characters.filter((item)=>item.name.toLowerCase().includes(filterName))
 

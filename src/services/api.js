@@ -1,7 +1,7 @@
 
 
-function api() {
-  return fetch(`https://hp-api.onrender.com/api/characters/house/gryffindor`)
+function api(search) {
+  return fetch(`https://hp-api.onrender.com/api/characters/house/${search}`)
   .then((resp) => resp.json())
   .then ((data) =>{
     const newArray = data.map((character)=>{
