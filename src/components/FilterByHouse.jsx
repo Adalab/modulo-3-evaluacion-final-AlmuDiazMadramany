@@ -9,7 +9,7 @@ function FilterByHouse({setSeacrh}) {
     
     <div>
       <label htmlFor="">Busca por casa</label>
-      <select name="" id="" onChange={handleSelect}>
+      <select onChange={handleSelect}>
         <option value="Gryffindor">Gryffindor</option>
         <option value="Slytherin">Slytherin</option>
         <option value="Hufflepuff">Hufflepuff</option>

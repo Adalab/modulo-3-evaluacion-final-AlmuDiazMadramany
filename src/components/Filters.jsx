@@ -2,7 +2,7 @@ import FilterByHouse from "./FilterByHouse"
 import FilterByName from "./FilterByName"
 
 
-function Filters({setFilterName, setSeacrh}) {
+function Filters({setFilterName, setSeacrh,}) {
  const handleForm =(ev)=>{
     ev.preventDefault()
   }

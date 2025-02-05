@@ -10,6 +10,9 @@ function api(search) {
             image:character.image,
             name:character.name,
             species:character.species,
+            status:character.alive,
+            gender:character.gender,
+            house:character.house
         };
     });
     return newArray;
