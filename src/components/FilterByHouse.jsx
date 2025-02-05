@@ -1,7 +1,13 @@
 
 function FilterByHouse() {
   return (
-    <div>FilterByHouse</div>
+    <div>
+      <select name="" id="">
+        
+      </select>
+
+
+    </div>
   )
 }
 
