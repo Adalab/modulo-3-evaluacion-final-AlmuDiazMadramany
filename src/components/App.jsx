@@ -11,13 +11,17 @@ function App() {
 
   const [characters, setCharacters] = useState([])
   const [filterName, setFilterName] = useState("")
-  const [search, setSeacrh] = useState ("Slytherin")
+  const [search, setSeacrh] = useState ("Gryffindor")
+  
 
   useEffect(()=>{
     api(search).then((data)=>setCharacters(data))
   }, [search])
 
-  const filtersCharacters = characters.filter((item)=>item.name.toLowerCase().includes(filterName))
+  const filtersCharacters = characters
+  .filter((item)=>item.name.toLowerCase().includes(filterName))
+
+
 
   return (
     <>
@@ -28,7 +32,7 @@ function App() {
     <Routes>
       <Route path="/" element = {
         <>
-        <Filters setFilterName ={setFilterName} />
+        <Filters setFilterName ={setFilterName} setSeacrh={setSeacrh} />
         <CharacterList data={filtersCharacters}/>
         </>
         }/>

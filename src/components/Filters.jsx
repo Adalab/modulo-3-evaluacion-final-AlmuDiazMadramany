@@ -2,7 +2,7 @@ import FilterByHouse from "./FilterByHouse"
 import FilterByName from "./FilterByName"
 
 
-function Filters({setFilterName}) {
+function Filters({setFilterName, setSeacrh}) {
  const handleForm =(ev)=>{
     ev.preventDefault()
   }
@@ -10,7 +10,7 @@ function Filters({setFilterName}) {
     <form onSubmit={handleForm}>
       
       <FilterByName setFilterName ={setFilterName}/>
-      <FilterByHouse/>
+      <FilterByHouse setSeacrh={setSeacrh}/>
 
     </form>
   )
