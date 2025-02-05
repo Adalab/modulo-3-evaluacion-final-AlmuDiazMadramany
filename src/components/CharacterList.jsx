@@ -16,7 +16,11 @@ function CharacterList({data}) {
   
 
   return (
-    <div className="character_list">{characterHtml}</div>
+    <>
+    <p>Pincha sobre tu personaje para conocer más datos</p>
+    <div className="character_list">
+      {characterHtml}</div>
+      </>
   )
 }
 

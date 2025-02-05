@@ -1,5 +1,5 @@
 
-function FilterByHouse({setSeacrh}) {
+function FilterByHouse({setSeacrh, search}) {
   const handleSelect = (ev) =>{
     setSeacrh(ev.target.value)
 
@@ -9,7 +9,7 @@ function FilterByHouse({setSeacrh}) {
     
     <div>
       <label htmlFor="">Busca por casa</label>
-      <select onChange={handleSelect}>
+      <select onChange={handleSelect} value={search}>
         <option value="Gryffindor">Gryffindor</option>
         <option value="Slytherin">Slytherin</option>
         <option value="Hufflepuff">Hufflepuff</option>

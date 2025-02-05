@@ -33,9 +33,10 @@ function App() {
   const characterDetail = characters.find(item=> item.id === characterIdUrl)
 
   
-
-
-
+  const handleReset = ()=>{
+    setFilterName("")
+    setSeacrh("Gryffindor")
+  }
 
   return (
     <>
@@ -46,8 +47,14 @@ function App() {
     <Routes>
       <Route path="/" element = {
         <>
-        <Filters setFilterName ={setFilterName} setSeacrh={setSeacrh} />
-        <button>Nueva búsqueda</button>
+        <Filters 
+        setFilterName ={setFilterName} 
+        setSeacrh={setSeacrh} 
+        filterName={filterName}
+        search={search}
+        />
+
+        <button onClick={handleReset}>Nueva búsqueda</button>
         <CharacterList data={filtersCharacters}/>
         </>
         }/>

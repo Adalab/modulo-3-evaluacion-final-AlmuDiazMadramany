@@ -1,6 +1,6 @@
 
 
-function FilterByName({setFilterName}) {
+function FilterByName({setFilterName,filterName}) {
   const handleInput = (ev) => {
     setFilterName (ev.target.value.toLowerCase())
   }
@@ -8,7 +8,7 @@ function FilterByName({setFilterName}) {
   return (
     <div>
       <label htmlFor="">Busca por personaje</label>
-      <input type="text" onChange={handleInput}/>
+      <input type="text" onChange={handleInput} value={filterName}/>
     </div>
   )
 }
