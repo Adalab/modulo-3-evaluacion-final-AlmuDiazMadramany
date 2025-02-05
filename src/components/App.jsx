@@ -5,12 +5,13 @@ import CharacterList from "./CharacterList"
 import { useState, useEffect } from "react"
 import api from "../services/api"
 import Filters from "./Filters"
+import localStorage from "../services/localstorage"
 
 
 function App() {
 
   const [characters, setCharacters] = useState([])
-  const [filterName, setFilterName] = useState("")
+  const [filterName, setFilterName] = useState(localStorage.get("nameSearch", ""))
   const [search, setSeacrh] = useState ("Gryffindor")
   
 
@@ -20,6 +21,10 @@ function App() {
 
   const filtersCharacters = characters
   .filter((item)=>item.name.toLowerCase().includes(filterName))
+
+  useEffect(()=>{
+    localStorage.set("nameSearch", filterName)
+  }, [filterName])
 
 
 
