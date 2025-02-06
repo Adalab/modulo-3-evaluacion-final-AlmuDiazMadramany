@@ -13,7 +13,10 @@ function App() {
 
   const [characters, setCharacters] = useState([])
   const [filterName, setFilterName] = useState(localStorage.get("nameSearch", ""))
+
   const [search, setSeacrh] = useState ("Gryffindor")
+
+  const [filterGender, setFilterGender] = useState ("")
   
 
   useEffect(()=>{
@@ -22,6 +25,7 @@ function App() {
 
   const filtersCharacters = characters
   .filter((item)=>item.name.toLowerCase().includes(filterName))
+  .filter((item) =>filterGender ? item.gender === filterGender : true)
 
   useEffect(()=>{
     localStorage.set("nameSearch", filterName)
@@ -30,6 +34,10 @@ function App() {
   useEffect(()=>{
     localStorage.set("houseSearch", search)
   }, [search]);
+
+  useEffect(()=>{
+    localStorage.set("genderSearch", filterGender)
+  }, [filterGender]);
 
   const { pathname } = useLocation()
   const characterRoute = matchPath("/character/:characterid", pathname)
@@ -40,6 +48,7 @@ function App() {
   const handleReset = ()=>{
     setFilterName("")
     setSeacrh("Gryffindor")
+    setFilterGender ("")
   }
 
   return (
@@ -58,6 +67,8 @@ function App() {
           setSeacrh={setSeacrh} 
           filterName={filterName}
           search={search}
+          setFilterGender ={setFilterGender}
+          filterGender ={filterGender}
           />
 
           <button className="reset_btn" onClick={handleReset}>Nueva búsqueda</button>

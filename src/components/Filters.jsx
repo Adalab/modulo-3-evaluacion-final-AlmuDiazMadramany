@@ -1,8 +1,9 @@
+import FilterByGender from "./FilterByGender"
 import FilterByHouse from "./FilterByHouse"
 import FilterByName from "./FilterByName"
 
 
-function Filters({setFilterName, setSeacrh,filterName, search}) {
+function Filters({setFilterName, setSeacrh,filterName, search, setFilterGender, filterGender}) {
  const handleForm =(ev)=>{
     ev.preventDefault()
   }
@@ -16,6 +17,11 @@ function Filters({setFilterName, setSeacrh,filterName, search}) {
       <FilterByHouse 
       setSeacrh={setSeacrh}
       search={search}/>
+
+      <FilterByGender 
+      setFilterGender ={setFilterGender}
+      filterGender ={filterGender}
+      />
 
     </form>
   )
