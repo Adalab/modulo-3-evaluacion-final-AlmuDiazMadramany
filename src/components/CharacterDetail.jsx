@@ -5,11 +5,20 @@ import ravenclawImg from "../images/house_ravenclaw.webp";
 import slytherinImg from "../images/house_slytherin.webp";
 
 
-
 function CharacterDetail({data}) {
-  const characterImage =data.image
-  ? data.image
-  : `https://placehold.co/600x400?text=Harry+Potter+Character`;
+  const getHouseImage = (house) =>{
+      switch (house){
+        case "Gryffindor" : return gryffindorImg;
+        case "Slytherin" : return slytherinImg;
+        case "Hufflepuff" : return hufflepuffImg;
+        case "Ravenclaw" : return ravenclawImg;
+        default : return `https://placehold.co/600x400?text=Harry+Potter+Character`
+      }
+    };
+  
+    const characterImage =data.image
+    ? data.image
+    : getHouseImage (data.house) ;
 
   const status = data.status ? "vivo" : "muerto";
 
