@@ -1,3 +1,4 @@
+import "../styles/Filters.scss"
 
 function FilterByGender({setFilterGender, filterGender}) {
   

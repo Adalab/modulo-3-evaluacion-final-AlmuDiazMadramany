@@ -1,4 +1,4 @@
-
+import "../styles/Filters.scss"
 
 function FilterByName({setFilterName,filterName}) {
   const handleInput = (ev) => {

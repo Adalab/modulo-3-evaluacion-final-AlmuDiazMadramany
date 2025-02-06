@@ -1,3 +1,4 @@
+import "../styles/Filters.scss"
 
 function FilterByHouse({setSeacrh, search}) {
   const handleSelect = (ev) =>{

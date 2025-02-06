@@ -1,5 +1,7 @@
 import Header from "./Header"
 import "../styles/App.scss"
+import "../styles/Filters.scss"
+
 import { matchPath, Route, Routes, useLocation } from "react-router-dom"
 import CharacterList from "./CharacterList"
 import { useState, useEffect } from "react"

@@ -1,4 +1,5 @@
 import CharacterCard from "./CharacterCard"
+import "../styles/CharacterList.scss"
 
 
 function CharacterList({data}) {

@@ -1,0 +1,42 @@
+.main_filters{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  
+  }
+  
+  .filter_name{
+    margin:10px;
+    display: flex;
+    gap: 10px;
+    
+  }
+  
+  .filter_name_label{
+    color: white;
+    font-size: 18px;
+  }
+  
+  .filter_name_input{
+    padding: 2px;
+    font-size: 14px;
+    border: 2px solid rgba(197, 112, 9, 0.8);
+    border-radius: 10px;
+  }
+  
+  .filter_name_input:focus{
+    border-color: rgba(136, 24, 24, 0.903);
+    color: rgba(136, 24, 24, 0.903);
+  }
+  
+  .filter_house{
+    margin:10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filter_house_label{
+    color: white;
+    font-size: 18px;
+  }

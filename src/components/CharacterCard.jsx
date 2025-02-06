@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-
+import "../styles/CharacterList.scss"
 import gryffindorImg from "../images/house_gryffindor.webp";
 import hufflepuffImg from "../images/house_hufflepuff.webp";
 import ravenclawImg from "../images/house_ravenclaw.webp";
