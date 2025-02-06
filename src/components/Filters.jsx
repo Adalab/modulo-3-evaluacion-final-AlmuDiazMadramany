@@ -12,8 +12,10 @@ function Filters({setFilterName, setSeacrh,filterName, search}) {
       <FilterByName 
       setFilterName ={setFilterName}
       filterName={filterName}
+      />
+      <FilterByHouse 
+      setSeacrh={setSeacrh}
       search={search}/>
-      <FilterByHouse setSeacrh={setSeacrh}/>
 
     </form>
   )

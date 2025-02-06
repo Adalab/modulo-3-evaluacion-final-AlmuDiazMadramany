@@ -25,7 +25,11 @@ function App() {
 
   useEffect(()=>{
     localStorage.set("nameSearch", filterName)
-  }, [filterName])
+  }, [filterName]);
+
+  useEffect(()=>{
+    localStorage.set("houseSearch", search)
+  }, [search]);
 
   const { pathname } = useLocation()
   const characterRoute = matchPath("/character/:characterid", pathname)

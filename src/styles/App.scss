@@ -12,6 +12,7 @@
   background-repeat: no-repeat; 
   background-attachment: fixed; 
   background-color: black; 
+  font-family: 'Nova Cut', cursive;
 }
 
 .header_logo {
@@ -122,6 +123,14 @@ a {
   flex-direction: column;
   color: white;
   justify-content: center;
+}
+.detail_characters{
+  list-style-type: none;
+  padding: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 0;
+
 }
 
 .back_btn{

@@ -12,7 +12,8 @@ function api(search) {
             species:character.species,
             status:character.alive,
             gender:character.gender,
-            house:character.house
+            house:character.house,
+            alternate_names:character.alternate_names
         };
     });
     return newArray;

@@ -22,6 +22,14 @@ function CharacterDetail({data}) {
 
   const status = data.status ? "vivo" : "muerto";
 
+  const alternateNames = 
+  data.alternate_names && data.alternate_names.length > 0 ? (
+    <> Nombres alternativos: {data.alternate_names.join(", ")}</>
+  ) : null;
+
+
+
+
   return (
     <div className="detail">
 
@@ -35,11 +43,18 @@ function CharacterDetail({data}) {
 
         <div className="detail_data">
         <h2>{data.name}</h2>
-        <p>Estatus: {status}</p>
-        <p>Especie: {data.species}</p>
-        <p>Género: {data.gender}</p>
-        <p>Casa: {data.house}</p>
+        <ul className="detail_characters">
+        <li>Estatus: {status}</li>
+        <li>Especie: {data.species}</li>
+        <li>Género: {data.gender}</li>
+        <li>Casa: {data.house}</li>
+        <li>{alternateNames}</li>
+        </ul>
+
+
         </div>
+
+
 
       </div>
 

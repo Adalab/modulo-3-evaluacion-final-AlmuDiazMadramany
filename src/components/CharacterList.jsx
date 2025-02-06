@@ -9,7 +9,10 @@ function CharacterList({data}) {
       <p className="error_message">No se ha encontrado ningún personaje con ese nombre</p>
     );
   } else{
-    characterHtml=data.map((character) => {
+    const dataOrded = [...data].sort ((a, b) => a.name.localeCompare(b.name));
+
+
+    characterHtml=dataOrded.map((character) => {
    return <CharacterCard key={character.id} info={character}/>;
   });
   }
